@@ -75,9 +75,11 @@
         .title {
             position: relative;
             // width: 500px;
-            text-align: center;
+            text-align: left;
             background-size: cover;
             color: transparent;
+            left: 80px;
+            top: 20px;
             height: 60px;
             line-height: 46px;
 
@@ -85,14 +87,26 @@
                 font-size: 38px;
                 font-weight: 900;
                 letter-spacing: 6px;
+                font-style: italic;
+                color: #d3f8fe;
                 width: 100%;
-                background: linear-gradient(92deg, #0072FF 0%, #00EAFF 48.8525390625%, #01AAFF 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                //background: linear-gradient(92deg, #0072FF 0%, #00EAFF 48.8525390625%, #01AAFF 100%);
+                //-webkit-background-clip: text;
+                //-webkit-text-fill-color: transparent;
             }
         }
     }
 
+
+}
+
+.flex{
+    display: flex;
+}
+.item-bj{
+    background: url("../assets/img/image/tab_left_n.png");
+    width: 227px;
+    height: 57px;
 
 }
 
