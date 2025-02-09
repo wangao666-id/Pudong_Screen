@@ -56,3 +56,46 @@ export function formatTime(time, fmt) {
     return fmt;
   }
 }
+
+
+export function formatNumberWithDots(number) {
+    // 将数字转换为字符串
+    let numStr = number.toString();
+
+    // 使用正则表达式每三位数字前加一个小数点
+    let formattedStr = numStr.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+    return formattedStr;
+}
+export function displayCurrentTime() {
+    // 获取显示时间的元素
+    const timeElement = document.getElementById('current-time');
+
+    // 更新时间的函数
+    function updateTime() {
+        // 获取当前时间
+        const now = new Date();
+
+        // 获取时、分、秒
+        const hours = String(now.getHours()).padStart(2, '0'); // 补零
+        const minutes = String(now.getMinutes()).padStart(2, '0'); // 补零
+        const seconds = String(now.getSeconds()).padStart(2, '0'); // 补零
+
+        // 格式化时间为 HH:MM:SS
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+        // 更新显示内容
+        if (timeElement) {
+            timeElement.textContent = formattedTime;
+        } else {
+            console.log(formattedTime); // 如果没有 DOM 元素，直接打印到控制台
+        }
+    }
+
+    // 初始调用一次，避免延迟
+    updateTime();
+
+    // 每秒更新一次时间
+    setInterval(updateTime, 1000);
+}
+

@@ -1,5 +1,5 @@
 <!--
- * @Author: daidai
+ * @Author: wang ao
  * @Date: 2022-01-12 14:23:32
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2022-09-09 14:47:24
@@ -21,23 +21,50 @@
                     <div class="d-flex jc-center">
                         <div class="title">
                             <p class="title-text">浦东共青团大数据</p>
+                            <p></p>
                         </div>
                     </div>
-<!--  -->
-                    <div class="flex" >
-                        <div class="item-bj" v-for="item in dataArr" :key="item.title">
-                            <p>{{item.title}}</p>
-                            <p class="title-text">{{item.num}} {{item.code}}</p>
-                        </div>
+<!--                    <div class="center-item">-->
 
-                    </div>
+                        <div class="flex center-item">
+                            <div class="item-bj">
+                                <p class="number">14-35岁青年</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}名</p>
+                            </div>
+                            <div class="item-bj" style="position: relative;left: -20px">
+                                <p class="number">共青团员</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}名</p>
+                            </div>
+                            <div class="item-bj" style="position: relative;left: -40px">
+                                <p class="number">少先队员</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}名</p>
+                            </div>
+                            <div class="item-bj" style="position: relative;left: -60px">
+                                <p class="number">团组织</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}家</p>
+                            </div>
+                            <div class="item-bj" style="position: relative;left: -80px">
+                                <p class="number">少先队大队</p>
+                                <p class="number-text">{{formatNumberWithDots('362')}}个</p>
+                            </div>
+                        </div>
+<!--                    </div>-->
+
                     <div class="timers">
-                        <!--            {{ dateYear }} {{ dateWeek }} {{ dateDay }}-->
-                        <!--            <i-->
-                        <!--              class="blq-icon-shezhi02"-->
-                        <!--              style="margin-left: 10px"-->
-                        <!--              @click="showSetting"-->
-                        <!--            ></i>-->
+                       <p style="color: #9ee9f3;font-size: 30px"> {{ dateDay }} </p>
+
+                       <div style="color: #9ee9f3;font-size: 20px;margin-left: 15px">
+                           <p style="margin-bottom: 4px">
+                               {{ today }}.{{dateWeek}}
+                           </p>
+                           <p>{{ dateYear }}</p>
+                       </div>
+
+<!--                                    <i-->
+<!--                                      class="blq-icon-shezhi02"-->
+<!--                                      style="margin-left: 10px"-->
+<!--                                      @click="showSetting"-->
+<!--                                    ></i>-->
                     </div>
 
                 </div>
@@ -45,7 +72,12 @@
                 <!-- 内容  s-->
                 <router-view></router-view>
                 <!-- 内容 e -->
+
+                <div class="screen-bottom"></div>
+
+
             </div>
+
         </div>
         <Setting ref="setting"/>
     </ScaleScreen>
@@ -53,7 +85,7 @@
 </template>
 
 <script>
-    import {formatTime} from "../utils/index.js";
+    import {formatTime,formatNumberWithDots} from "@/utils";
     import Setting from "./setting.vue";
     import ScaleScreen from "@/components/scale-screen/scale-screen.vue";
 
@@ -65,38 +97,34 @@
                 loading: true,
                 dateDay: null,
                 dateYear: null,
+                today:null,
                 dateWeek: null,
-                weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+                weekday: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
                 dataArr: [
                     {
-                    title:'14-35岁青年',
-                    code:'名',
-                    num:1756900
-                },
-                    {
-                        title:'共青团员',
-                        code:'名',
-                        num:1756900
+                        title: '14-35岁青年',
+                        code: '名',
+                        num: 1756900
                     },
                     {
-                        title:'少先队员',
-                        code:'名',
-                        num:1756900
+                        title: '共青团员',
+                        code: '名',
+                        num: 1756900
                     },
                     {
-                        title:'儿童团员',
-                        code:'名',
-                        num:1756900
+                        title: '少先队员',
+                        code: '名',
+                        num: 1756900
                     },
                     {
-                        title:'团组织',
-                        code:'家',
-                        num:1756900
+                        title: '团组织',
+                        code: '家',
+                        num: 1756900
                     },
                     {
-                        title:'少先队大队',
-                        code:'个',
-                        num:326
+                        title: '少先队大队',
+                        code: '个',
+                        num: 326
                     }
                 ],
             };
@@ -112,18 +140,34 @@
         mounted() {
             this.timeFn();
             this.cancelLoading();
+            this.getToday()
         },
         beforeDestroy() {
             clearInterval(this.timing);
+            if (this.timer) {
+                clearInterval(this.timer);
+            }
         },
         methods: {
+            formatNumberWithDots,
             showSetting() {
                 this.$refs.setting.init();
+            },
+            getToday() {
+                // 获取当前日期
+                const date = new Date();
+
+                // 获取今天是周几（0-6，0 表示周日）
+                const dayOfWeek = date.getDay();
+
+                // 将数字映射为英文缩写
+                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                this.today = days[dayOfWeek];
             },
             timeFn() {
                 this.timing = setInterval(() => {
                     this.dateDay = formatTime(new Date(), "HH: mm: ss");
-                    this.dateYear = formatTime(new Date(), "yyyy-MM-dd");
+                    this.dateYear = formatTime(new Date(), "yyyy.MM.dd");
                     this.dateWeek = this.weekday[new Date().getDay()];
                 }, 1000);
             },

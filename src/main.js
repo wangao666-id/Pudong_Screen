@@ -1,5 +1,5 @@
 /*
- * @Author: daidai
+ * @Author: wang ao
  * @Date: 2022-01-12 14:05:56
  * @LastEditors: Please set LastEditors
  * @LastEditTime: 2023-08-07 17:12:07
@@ -10,7 +10,7 @@ import App from "./App.vue";
 import router from './router'
 import store from './store'
 import {loading,borderBox13,digitalFlop,capsuleChart,borderBox8} from '@jiaminghi/data-view'
-import { Radio,Button,RadioGroup } from 'element-ui'
+import { Radio,Button,RadioGroup,Progress } from 'element-ui'
 import Echart from './components/echart/index.vue'
 import ItemWrap from './components/item-wrap/item-wrap.vue'
 import Message from './components/message/message.vue'
@@ -36,6 +36,7 @@ Vue.prototype.$Message =  Messages
 Vue.use(Radio);
 Vue.use(Button);
 Vue.use(RadioGroup)
+Vue.use(Progress)
 
 // datav组件
 Vue.use(loading)

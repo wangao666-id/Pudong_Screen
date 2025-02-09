@@ -22,13 +22,15 @@
 
     .host-body {
         height: 100%;
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: space-between;
 
         .title_wrap {
             height: 93px;
-            background-image: url("../assets/img/image/top.png");
+            background-image: url("../assets/img/image/header.png");
             background-size: cover;
             position: relative;
-            margin-bottom: 4px;
 
             //.guang {
             //    position: absolute;
@@ -60,7 +62,7 @@
 
             .timers {
                 position: absolute;
-                right: 0;
+                right: 35px;
                 top: 30px;
                 font-size: 18px;
                 display: flex;
@@ -100,15 +102,52 @@
 
 }
 
-.flex{
+.flex {
     display: flex;
 }
-.item-bj{
-    background: url("../assets/img/image/tab_left_n.png");
-    width: 227px;
+
+.item-bj {
+    background: url("../assets/img/image/tab_left_n.png") no-repeat;
+    background-size: 100% 100%;
+    width: 220px;
     height: 57px;
+    box-sizing: border-box;
+    padding: 8px 40px;
+    position: relative;
 
 }
+
+.center-item {
+    position: absolute;
+    left: 500px;
+    top: 45px;
+
+
+}
+
+.screen-bottom {
+    height: 50px !important;
+    background-size: 100% 100%;
+    background: url("../assets/img/image/screen-bottom.png") no-repeat;
+}
+
+
+.number-text {
+    color: #ebb164;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: right;
+
+}
+
+.number {
+    color: #a7f0f6;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
 
 .scale-wrap {
     .pagetab {
@@ -143,7 +182,8 @@
         font-weight: 900;
         position: relative;
         text-indent: 10px;
-        padding:16px 0 10px 0 ;
+        padding: 16px 0 10px 0;
+
         &::before {
             display: block;
             content: " ";
@@ -152,7 +192,7 @@
             border-radius: 2px;
             background: #0072FF;
             position: absolute;
-            left: 0px;
+            left: 0;
         }
     }
 
@@ -200,7 +240,8 @@
             .setting_label {
                 color: #555454;
             }
-            .setting_label_tip{
+
+            .setting_label_tip {
                 font-size: 12px;
                 color: #838282;
             }
