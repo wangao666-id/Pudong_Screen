@@ -7,21 +7,21 @@
                     <p style="position: relative;top: -40px">共青团</p>
                 </div>
             </div>
-            <div class="w-bj" style="font-weight: 500">
+            <div class="w-bj">
                 <div class="n-bj"></div>
                 <div class="center-box1">
                     <span style="font-size: 13px">学生</span>
                     <span>联合会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">67</span>
-                        <span style="font-size: 16px;color: #eac658">个</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
+                        <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box2">
-                    <span style="font-size: 13px">金融</span>
-                    <span>青年联谊</span>
+                    <span style="font-size: 13px">金融青年</span>
+                    <span>联谊</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">71</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     <span style="font-size: 13px">青农</span>
                     <span>联谊会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">39</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
@@ -37,14 +37,14 @@
                     <span style="font-size: 13px">青年</span>
                     <span>志愿者协会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">161</span>
-                        <span style="font-size: 16px;color: #eac658">个</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
+                        <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box5">
                     <span style="font-size: 13px">青年商会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">21</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
@@ -52,58 +52,55 @@
                     <span style="font-size: 13px">青年</span>
                     <span>创业立业协会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">50</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box-w2">
-                    <span style="font-size: 13px">外籍青年</span>
-                    <span>联谊会</span>
+                    <span style="font-size: 13px">青年</span>
+                    <span>创业立业协会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">30</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box-w3">
-                    <span style="font-size: 13px">文创青年</span>
-                    <span>联谊会</span>
+                    <span style="font-size: 13px">青年</span>
+                    <span>创业立业协会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">93</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box-w4">
-                    <span style="font-size: 13px">律师青年</span>
-                    <span>联合会</span>
+                    <span style="font-size: 13px">青年</span>
+                    <span>创业立业协会</span>
                     <div>
                         <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box-w5">
-                    <span style="font-size: 13px">青年建设</span>
-                    <span>人才协会</span>
+                    <span style="font-size: 13px">青年</span>
+                    <span>创业立业协会</span>
                     <div>
                         <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
-                        <span style="font-size: 16px;color: #eac658">/</span>
-                        <span style="font-size: 22px;color: #eac658">1</span>
-                        <span style="font-size: 16px;color: #eac658">个</span>
                     </div>
                 </div>
                 <div class="center-box-w6">
-                    <span style="font-size: 13px">张江园区</span>
-                    <span>青年联谊会</span>
+                    <span style="font-size: 13px">青年</span>
+                    <span>创业立业协会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">160</span>
-                        <span style="font-size: 16px;color: #eac658">个</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
+                        <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
                 <div class="center-box-w7">
-                    <span style="font-size: 13px">航运青年</span>
-                    <span>联谊会</span>
+                    <span style="font-size: 13px">青年</span>
+                    <span>创业立业协会</span>
                     <div>
-                        <span style="font-size: 22px;color: #eac658">50</span>
+                        <span style="font-size: 22px;color: #eac658">112</span>
                         <span style="font-size: 16px;color: #eac658">人</span>
                     </div>
                 </div>
@@ -122,7 +119,7 @@
         position: relative;
         width: 700px;
         height: 700px;
-        background-image: url("../../assets/img/image/wbj1.png");
+        background-image: url("../../assets/img/image/wbj.png");
     }
 
     .cen {

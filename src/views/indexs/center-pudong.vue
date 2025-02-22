@@ -8,12 +8,8 @@
         </div>
 
         <div style="border: 2px solid #86B8EF;height: 100%;" :class="[sleIndex===4?'center':'']">
-            <mapFirst v-if="sleIndex===1" :current="sleIndex"/>
-            <mapSec v-if="sleIndex===2" :current="sleIndex"/>
-            <mapThird v-if="sleIndex===3" :current="sleIndex"/>
-            <transition name="fade-zoom-rotate">
-                <FriendQuan v-if="sleIndex===4"/>
-            </transition>
+            <mapFirst v-if="sleIndex!==4"/>
+            <FriendQuan v-else/>
         </div>
 
     </div>
@@ -23,17 +19,12 @@
     import pic from '@/assets/img/image/ic-bj-a.png'
     import picSel from '@/assets/img/image/ic-bj-r.png'
     import mapFirst from './map-first.vue'
-    import mapSec from './mapSec.vue'
-    import mapThird from './map-third.vue'
-
     import FriendQuan from './friend-quan.vue'
 
 
     export default {
         components: {
             mapFirst,
-            mapSec,
-            mapThird,
             FriendQuan
         },
         data() {
@@ -93,25 +84,4 @@
         justify-content: center;
     }
 
-    /* 进入时的动画 */
-    .fade-zoom-rotate-enter-active {
-        animation: fadeZoomRotateIn 1s ease-out;
-    }
-
-    /* 离开时直接隐藏 */
-    .fade-zoom-rotate-leave-active {
-        opacity: 0;
-    }
-
-    /* 进入动画：缩放+旋转 */
-    @keyframes fadeZoomRotateIn {
-        0% {
-            opacity: 0;
-            transform: scale(0.1) rotate(-180deg);
-        }
-        100% {
-            opacity: 1;
-            transform: scale(1) rotate(0deg);
-        }
-    }
 </style>

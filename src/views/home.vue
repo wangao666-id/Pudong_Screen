@@ -33,15 +33,15 @@
                             </div>
                             <div class="item-bj" style="position: relative;left: -20px">
                                 <p class="number">共青团员</p>
-                                <p class="number-text">{{formatNumberWithDots('83755')}}名</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}名</p>
                             </div>
                             <div class="item-bj" style="position: relative;left: -40px">
                                 <p class="number">少先队员</p>
-                                <p class="number-text">{{formatNumberWithDots('217355')}}名</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}名</p>
                             </div>
                             <div class="item-bj" style="position: relative;left: -60px">
                                 <p class="number">团组织</p>
-                                <p class="number-text">{{formatNumberWithDots('5078')}}家</p>
+                                <p class="number-text">{{formatNumberWithDots('1756900')}}家</p>
                             </div>
                             <div class="item-bj" style="position: relative;left: -80px">
                                 <p class="number">少先队大队</p>

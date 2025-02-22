@@ -12,7 +12,7 @@
                 <!-- <div class="item">实时监测</div> -->
 
             </div>
-            <ItemWrap  class="contetn_lr-top-item" title="引领区青年说">
+            <ItemWrap class="contetn_lr-top-item" title="引领区青年说">
                 <LeftTop/>
             </ItemWrap>
             <ItemWrap class="contetn_left-center-item " title="国旗下成长">
@@ -54,7 +54,7 @@
             </ItemWrap>
             <ItemWrap
                 class="contetn_right-bottom"
-                title="青春守护者 "
+                title="清纯守护者 "
             >
                 <RightBottom/>
             </ItemWrap>
@@ -101,9 +101,7 @@
 
         mounted() {
         },
-        methods: {
-
-        },
+        methods: {},
     };
 </script>
 <style lang="scss" scoped>
