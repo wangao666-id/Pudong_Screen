@@ -26,7 +26,7 @@
                         开展活动
                     </p>
                     <p class="title-btn">
-                        228 场
+                        346 场
                     </p>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                         参与人数
                     </p>
                     <p class="title-btn">
-                        228 人
+                        10308 人
                     </p>
                 </div>
             </div>

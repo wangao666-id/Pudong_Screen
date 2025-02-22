@@ -15,7 +15,17 @@
             <div style="margin-top: 15px">
                 <div class="flex" style="margin-bottom:5px;" v-for="item in arrItem">
                     <div style="width: 200px;margin-right: 15px">
-                        <el-progress :stroke-width="10" :define-back-color="'#39486c'" :percentage="item.value"></el-progress>
+                        <el-progress :stroke-width="10" :define-back-color="'#39486c'" :percentage="item.value">
+                            <template #default="{ percentage }">
+                                <div
+                                    class="custom-progress"
+                                    :style="{
+          width: percentage + '%',
+          background: 'linear-gradient(to right, red, orange, yellow, green)',
+        }"
+                                ></div>
+                            </template>
+                        </el-progress>
                     </div>
                     <div class="flex"
                          style="justify-content: space-between;width: 250px; border-bottom: 2px solid  #525e7d;padding-bottom: 4px;box-sizing: border-box">
@@ -34,7 +44,7 @@
         </component>
     </div>
 
-    <Reacquire v-else @onclick="getData" style="line-height: 200px"/>
+    <Reacquire v-else @onclick="" style="line-height: 200px"/>
 </template>
 
 <script>
@@ -55,66 +65,66 @@
                     limitMoveNum: 5,
                     step: 0,
                 },
-                arrItem:[
+                arrItem: [
                     {
-                        title:'优秀团员团干部',
-                        value:20,
-                        num:1298,
-                        dw:'人'
+                        title: '优秀团员团干部',
+                        value: 70,
+                        num: 1298,
+                        dw: '人'
                     },
                     {
-                        title:'青年岗位能手',
-                        value:20,
-                        num:392,
-                        dw:'人'
+                        title: '青年岗位能手',
+                        value: 36,
+                        num: 392,
+                        dw: '人'
                     },
                     {
-                        title:'浦东十大杰出青年',
-                        value:80,
-                        num:40,
-                        dw:'人'
+                        title: '浦东十大杰出青年',
+                        value: 6,
+                        num: 40,
+                        dw: '人'
                     },
                     {
-                        title:'红旗(特色)团组织',
-                        value:20,
-                        num:743,
-                        dw:'家'
+                        title: '红旗(特色)团组织',
+                        value: 60,
+                        num: 743,
+                        dw: '家'
                     },
                     {
-                        title:'青年文明号',
-                        value:60,
-                        num:249,
-                        dw:'个'
+                        title: '青年文明号',
+                        value: 30,
+                        num: 249,
+                        dw: '个'
                     },
                     {
-                        title:'青年突击队',
-                        value:10,
-                        num:285,
-                        dw:'个'
+                        title: '青年突击队',
+                        value: 35,
+                        num: 285,
+                        dw: '个'
                     },
                     {
-                        title:'培训团干部',
-                        value:40,
-                        num:14300,
-                        dw:'人次'
+                        title: '培训团干部',
+                        value: 95,
+                        num: 14300,
+                        dw: '人次'
                     },
                     {
-                        title:'青年英才',
-                        value:20,
-                        num:299,
-                        dw:'名'
+                        title: '青年英才',
+                        value: 38,
+                        num: 299,
+                        dw: '名'
                     },
                     {
-                        title:'招募有志青年',
-                        value:50,
-                        num:229,
-                        dw:'人'
+                        title: '招募有志青年',
+                        value: 31,
+                        num: 229,
+                        dw: '人'
                     },
                     {
-                        title:'大学生暑期实践',
-                        value:70,
-                        num:469,
-                        dw:'人'
+                        title: '大学生暑期实践',
+                        value: 45,
+                        num: 469,
+                        dw: '人'
                     }
 
                 ]
@@ -136,7 +146,7 @@
         },
 
         mounted() {
-            this.getData();
+            // this.getData();
         },
         methods: {
             addressHandle(item) {
@@ -304,7 +314,7 @@
     }
 
     :deep(.el-progress-bar__inner) {
-        background: radial-gradient(0% 0% at 0% 0%, #2F63E7 0%, #9AE3FE 100%);
+        background: linear-gradient(to right, #2F63E7, #9AE3FE);
     }
 
     :deep(.el-progress-bar__outer) {

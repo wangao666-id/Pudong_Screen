@@ -8,7 +8,7 @@
 <template>
 <div style="margin-top: 10px;">
     <div class='video'>
-
+        <video class="video-box" ref="videoPlayer" controls="true" :src="videoSrc" autoplay="true" loop="true"></video>
     </div>
 
 </div>
@@ -20,6 +20,7 @@ import {graphic} from "echarts"
 export default {
   data() {
     return {
+        videoSrc: require("@/assets/video/pd-video.mp4"), // 视频地址
     };
   },
   created() {
@@ -41,5 +42,9 @@ export default {
     height: 275px;
     border: 2px solid #46AEF7;
     border-radius: 6px 6px 6px 6px;
+}
+.video-box{
+    width: 470px;
+    height: 275px;
 }
 </style>
